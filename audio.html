@@ -7,11 +7,18 @@
 </head>
 <body>
     <h2>Now Playing: USP3 Audio</h2>
-    <audio autoplay controls>
+    <!-- Audio element without autoplay -->
+    <audio id="audio-player" controls>
         <source src="usp3.wav" type="audio/wav">
         Your browser does not support the audio element.
     </audio>
     <br>
     <a href="index.html">Go Back</a>
-</body>
-</html>
+
+    <!-- JavaScript to play audio on page load -->
+    <script>
+        window.onload = function() {
+            // Select the audio element
+            let audio = document.getElementById("audio-player");
+            
+  
